@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded");
 
+  document.querySelector("#clear").addEventListener("click", clear);
   document.querySelector("#calculate").addEventListener("click", calculate);
 });
 
@@ -11,22 +12,27 @@ const results = document.querySelector("#results");
 const number1 = document.querySelector("#firstnumber");
 const number2 = document.querySelector("#secondnumber");
 let operator;
-let result;
 let rounding;
+let result;
 let resultValue;
+
+function clear() {
+  //Empty the previous results container
+  results.innerHTML = "";
+}
 
 function calculate() {
   //Get operator
   operator = document.querySelector("#operator").value;
 
   //Calculate result based on given operation
-  if (operator == "add") {
+  if (operator === "add") {
     resultValue = parseInt(number1.value) + parseInt(number2.value);
-  } else if (operator == "sub") {
+  } else if (operator === "sub") {
     resultValue = parseInt(number1.value) - parseInt(number2.value);
-  } else if (operator == "mul") {
+  } else if (operator === "mul") {
     resultValue = parseInt(number1.value) * parseInt(number2.value);
-  } else if (operator == "div") {
+  } else if (operator === "div") {
     resultValue = parseInt(number1.value) / parseInt(number2.value);
   }
 
