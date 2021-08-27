@@ -35,4 +35,5 @@ function calculate() {
   result = document.createElement("li");
   result.textContent = resultValue;
   results.appendChild(result);
+  results.scrollTop = results.scrollHeight;
 }
