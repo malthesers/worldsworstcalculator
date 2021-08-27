@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#calculate").addEventListener("click", calculate);
 });
 
-let number1 = document.querySelector("#firstnumber");
-let number2 = document.querySelector("#secondnumber");
+const results = document.querySelector("#results");
+const number1 = document.querySelector("#firstnumber");
+const number2 = document.querySelector("#secondnumber");
 let operator;
 let result;
+let resultValue;
 
 function calculate() {
   //Get operator
@@ -17,15 +19,20 @@ function calculate() {
 
   //Calculate result
   if (operator == "add") {
-    result = parseInt(number1.value) + parseInt(number2.value);
+    resultValue = parseInt(number1.value) + parseInt(number2.value);
   } else if (operator == "sub") {
-    result = parseInt(number1.value) - parseInt(number2.value);
+    resultValue = parseInt(number1.value) - parseInt(number2.value);
   } else if (operator == "mul") {
-    result = parseInt(number1.value) * parseInt(number2.value);
+    resultValue = parseInt(number1.value) * parseInt(number2.value);
   } else if (operator == "div") {
-    result = parseInt(number1.value) / parseInt(number2.value);
+    resultValue = parseInt(number1.value) / parseInt(number2.value);
   }
 
   //Post result as value of first input
-  number1.value = result;
+  number1.value = resultValue;
+
+  //Append to list of results
+  result = document.createElement("li");
+  result.textContent = resultValue;
+  results.appendChild(result);
 }
