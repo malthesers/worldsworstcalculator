@@ -29,13 +29,14 @@ function calculate() {
   if (operator === "add") {
     resultValue = parseInt(number1.value) + parseInt(number2.value);
   } else if (operator === "sub") {
-    resultValue = parseInt(number1.value) - parseInt(number2.value);
+    resultValue = number1.value - number2.value;
   } else if (operator === "mul") {
-    resultValue = parseInt(number1.value) * parseInt(number2.value);
+    resultValue = number1.value * number2.value;
   } else if (operator === "div") {
-    resultValue = parseInt(number1.value) / parseInt(number2.value);
+    resultValue = number1.value / number2.value;
   }
 
+  //Read checkbox to know whether to round or not
   if (checkbox.checked === true) {
     //Get amound of decimals to round to
     rounding = parseInt(document.querySelector("#decimals").value);
@@ -47,7 +48,7 @@ function calculate() {
   //Post result as value of first input
   number1.value = resultValue;
 
-  //Append to list of results
+  //Append to list of results and scroll to bottom
   result = document.createElement("li");
   result.textContent = resultValue;
   results.appendChild(result);
