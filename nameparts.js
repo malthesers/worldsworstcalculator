@@ -9,6 +9,7 @@ const middleName = fullName.substring(
   fullName.lastIndexOf(" ")
 );
 const lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
+
 console.log(`First name: ${firstName}`);
 console.log(`Middle name(s): ${middleName}`);
 console.log(`Last name: ${lastName}`);
