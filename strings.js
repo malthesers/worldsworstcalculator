@@ -26,11 +26,11 @@ console.log(`Characters: ${name.length}`);
 console.log(`Index 2: ${name[2]}`);
 console.log(`Index 6: ${name[6]}`);
 console.log(`Index D: ${name.indexOf(`D`)}`);
-console.log(`Index e: ${name.lastIndexOf(`e`)}`)
+console.log(`Index e: ${name.lastIndexOf(`e`)}`);
 
 console.log(`Albus: ${name.substr(0, 5)}`);
 console.log(`Dumbledore: ${name.substr(29)}`);
-console.log(`Wulfric: ${name.substr(15, 8)}`)
+console.log(`Wulfric: ${name.substr(15, 8)}`);
 console.log(` Wulfric :_${name.substr(14, 9)}_`);
 console.log(`ian: ${name.substr(25, 3)}`);
 console.log(`bus: ${name.substr(2, 3)}`);
