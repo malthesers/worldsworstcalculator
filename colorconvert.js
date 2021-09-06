@@ -2,10 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded");
-
-  let RGB = hexToRGB("#c0ffee");
-
-  console.table(RGB);
 });
 
 function hexToRGB(hex) {
@@ -18,4 +14,12 @@ function hexToRGB(hex) {
     g: g,
     b: b,
   };
+}
+
+function rgbToHex(rgb) {
+  let r = rgb.r.toString(16);
+  let g = rgb.g.toString(16);
+  let b = rgb.b.toString(16);
+
+  return `#${r}${g}${b}`;
 }
