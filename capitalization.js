@@ -2,6 +2,9 @@
 
 const name = "mAlThE";
 
-const newName = name[0].toUpperCase() + name.substring(1).toLowerCase();
+capitalise(name);
 
-console.log(newName);
+function capitalise(str) {
+  const newName = str[0].toUpperCase() + str.substring(1).toLowerCase();
+  console.log(newName);
+}

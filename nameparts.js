@@ -1,15 +1,29 @@
 "use strict";
 
-const fullNameAlso = "Malthe Kusk Lauritsen";
-const fullName = "Malthe Vincent Worning Kusk Lauritsen";
+// const fullNameAlso = "Malthe Kusk Lauritsen";
+// const fullName = "Malthe Vincent Worning Kusk Lauritsen";
 
-const firstName = fullName.substring(0, fullName.indexOf(" "));
-const middleName = fullName.substring(
-  fullName.indexOf(" ") + 1,
-  fullName.lastIndexOf(" ")
-);
-const lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
+const fullname = `Harry James Potter`;
 
-console.log(`First name: ${firstName}`);
-console.log(`Middle name(s): ${middleName}`);
-console.log(`Last name: ${lastName}`);
+getNameParts(fullname);
+
+function getNameParts(fullname) {
+  const firstName = fullname.substring(0, fullname.indexOf(" "));
+  const middleName = fullname.substring(
+    fullname.indexOf(" ") + 1,
+    fullname.lastIndexOf(" ")
+  );
+  const lastName = fullname.substring(fullname.lastIndexOf(" ") + 1);
+
+  console.log(firstName, middleName, lastName);
+
+  fullName("Potter", "Harry", "James", "pottypotpot");
+}
+
+function fullName(lastName, firstName, middleName) {
+  if (middleName === undefined) {
+    console.log(firstName, lastName);
+  } else {
+    console.log(firstName, middleName, lastName);
+  }
+}
